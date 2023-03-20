@@ -1,0 +1,17 @@
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/my-reset';
+@import './common';
+
+@import './components/header';
+@import './components/filter-section';
+@import './components/main-home';
+@import './components/main-fav';
+@import './components/main-read';
+@import './components/btn-up.scss';
+@import './components/footer';
+@import './components/categories';
+@import './components/_bodyTheme';
+@import './components/_pagination';
+@import './components/withoutNews';

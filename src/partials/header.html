@@ -1,0 +1,146 @@
+<!----------- HEADER ----------->
+<header class="header">
+  <div class="container header__container">
+    <a href="./index.html" class="logo">
+      <span class="logo__text">News</span>
+    </a>
+
+    <!----------- navigation ----------->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item current">
+          <a class="nav__link" href="./index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./favorites.html">Favorite</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./read.html">Read</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!------------- form search ------------->
+    <div class="search">
+      <form class="search__form">
+        <input class="search__input" type="search" name="word" placeholder="Search  |" />
+        <button type="submit" class="search__btn-submit">
+          <svg class="search__icon icon" width="15" height="15">
+            <use href="./images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+      <button class="search__btn-input">
+        <svg class="search__icon icon" width="15" height="15">
+          <use href="./images/sprite.svg#search"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!------- switcher ------->
+    <div class="switcher switcher-tablet">
+      <div class="switcher__thumb sun">
+        <span class="switcher__text">Light</span>
+        <svg class="icon switcher__icon" width="18" height="18">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
+      </div>
+      <div class="switcher__thumb js-switcher">
+        <div class="disc"></div>
+      </div>
+      <div class="switcher__thumb moon">
+        <span class="switcher__text">Dark</span>
+        <svg class="icon switcher__icon" width="16" height="16">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
+    </div>
+
+    <!-------- burger ------->
+    <button class="menu__btn-burger">
+      <svg class="menu__icon icon" width="24" height="24">
+        <use href="./images/sprite.svg#menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!------------------ mobile menu ----------------->
+<div class="menu is-hidden">
+  <div class="menu__container">
+    <div class="menu-top">
+      <div class="menu__header left-right-paddings">
+        <a href="./index.html" class="logo">
+          <span class="logo__text">News</span>
+        </a>
+
+        <button class="menu__btn-cross">
+          <svg class="menu__icon-cross icon" width="24" height="24">
+            <use href="./images/sprite.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+      <!---- navigation mobile-menu ---->
+      <ul class="menu__nav">
+        <li class="menu__item left-right-paddings current">
+          <a href="./index.html" class="menu__link">
+            <div class="menu__thumb">
+              <svg class="menu__item__icon" width="18" height="18">
+                <use href="./images/sprite.svg#home"></use>
+              </svg>
+            </div>
+            <span class="menu__text">Home</span>
+
+            <svg class="menu__arrow" width="8" height="14">
+              <use href="./images/sprite.svg#arrow-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu__item left-right-paddings">
+          <a href="./favorites.html" class="menu__link">
+            <div class="menu__thumb">
+              <svg class="menu__item__icon" width="18" height="18">
+                <use href="./images/sprite.svg#heart"></use>
+              </svg>
+            </div>
+            <span class="menu__text">Favorite</span>
+            <svg class="menu__arrow" width="8" height="14">
+              <use href="./images/sprite.svg#arrow-right"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="menu__item left-right-paddings">
+          <a href="./read.html" class="menu__link">
+            <div class="menu__thumb">
+              <svg class="menu__item__icon" width="18" height="18">
+                <use href="./images/sprite.svg#book-open"></use>
+              </svg>
+            </div>
+
+            <span class="menu__text">Read</span>
+            <svg class="menu__arrow" width="8" height="14">
+              <use href="./images/sprite.svg#arrow-right"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!------- switcher mobile-menu ------->
+    <div class="switcher left-right-paddings">
+      <div class="switcher__thumb sun">
+        <svg class="icon" width="18" height="18">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
+      </div>
+      <div class="switcher__thumb js-switcher">
+        <div class="disc"></div>
+      </div>
+      <div class="switcher__thumb moon">
+        <svg class="icon" width="16" height="16">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

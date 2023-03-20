@@ -1,0 +1,32 @@
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+$padding: 16px;
+
+$light-theme-bg: #f4f4f4;
+$dark-theme-bg: #2e2e2e;
+$light-theme-text: #111321;
+$dark-theme-text: #f4f4f4;
+$second-color: #a8a8a8;
+$accent-color: #4440f6;
+$accent-color-weather:#4440F7;
+$theme-switcher-color: #5f6775;
+$theme-accent-color: #4b48db;
+$white-color-text: #fff;
+
+ //cards
+ $primary-white-color: #fff;
+ $chip-bc: rgba(68, 64, 247, 0.7);
+ $hover-text-color: #2f2cc4;
+ $read-text: #00dd73;
+ $mute-color-card: rgba(244, 244, 244, 0.4);
+ $fill-favorite-icon: #4b48da;
+ $transition-duration: 250ms;
+ $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+ //calendar
+ $calendar-arrow-color: #a2a2a2;
+ $calendar-maintext-color: #000000;
+ $calendar-bkgd-color: #f8f8f8;
+ $calendar-week-color: rgba(60, 60, 67, 0.3);
+ $calendar-hover-color: #e7e1e1;

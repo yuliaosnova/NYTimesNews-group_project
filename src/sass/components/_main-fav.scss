@@ -1,0 +1,32 @@
+.in-favorites {
+    fill: #4b48da;
+}
+
+.universe {
+    padding: 40px;
+    background-color: #aaa;
+}
+
+.giga-test-container, .mega-test-container, .super-test-container {
+    padding: 40px;
+    background-color: green;
+
+    &.in-favorites {
+        background-color: #4b48da;
+    }
+}
+
+.test-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: aquamarine;
+
+    & button {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: blue;
+        color: white;
+    }
+}

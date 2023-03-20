@@ -1,0 +1,116 @@
+// ------------ categories -------------
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  max-width: 790px;
+  @include desktop() {
+    gap: 21px;
+  }
+}
+
+.categories__list-drop {
+  z-index: 130;
+  position: absolute;
+  width: max-content;
+  top: 102%;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+}
+
+.categories__mobile {
+  @include tablet() {
+    display: none;
+  }
+}
+
+.categories__tablet {
+  display: none;
+  @include tablet() {
+    display: inline;
+  }
+}
+
+// create format categories mob/tab/desk : 1/5/7
+.categories__item {
+  position: relative;
+  border: 2px $accent-color solid;
+  border-radius: 15px;
+  background-color: $light-theme-bg;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $light-theme-bg;
+  }
+
+  &,
+  &-drop {
+    color: $accent-color;
+
+    &.isActiveCateg {
+      background-color: $accent-color;
+      color: $light-theme-bg;
+      .categories__icon-down {
+        display: none;
+      }
+      .categories__icon-top {
+        display: block;
+      }
+    }
+  }
+
+  // &.active-categories {
+  //   background-color: $accent-color;
+  //   color: $light-theme-bg;
+  // }
+
+  &:not(:last-of-type) {
+    display: none;
+    @include desktop() {
+      display: block;
+    }
+  }
+  &:not(:nth-of-type(1), :nth-of-type(2)) {
+    @include tablet() {
+      display: block;
+    }
+  }
+}
+
+.categories__btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 13px;
+
+  @include tablet() {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-drop {
+    padding: 7px 13px;
+  }
+
+  &:hover > .categories__text {
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.categories__icon {
+  &-top {
+    display: none;
+  }
+  &.js-categories {
+    .categories__icon-top {
+      display: inline-block;
+    }
+  }
+}

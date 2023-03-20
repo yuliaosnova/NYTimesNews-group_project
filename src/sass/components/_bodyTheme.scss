@@ -1,0 +1,11 @@
+// ----------- BODY_THEME ---------
+body {
+  color: $light-theme-text;
+  background-color: $light-theme-bg;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
+  &.isDark {
+    color: $dark-theme-text;
+    background-color: $dark-theme-bg;
+  }
+}

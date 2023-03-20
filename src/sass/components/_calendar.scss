@@ -1,0 +1,267 @@
+
+/* CALENDAR FORM*/
+.calendar__box {
+  position: relative;
+  display: flex;
+
+  margin-left: auto;
+  z-index: 100;
+}
+
+.calendar__form-title {
+  display: none;
+  @include desktop() {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.39;
+
+    margin-right: 37px;
+  }
+}
+
+.calendar__form {
+  display: flex;
+  align-items: center;
+  width: 168px;
+  border-radius: 20px;
+
+  padding: 5px 12px;
+  border: 1px solid $light-theme-text;
+
+  cursor: pointer;
+}
+
+.calendar__form-text {
+  display: flex;
+  margin-right: auto;
+
+  font-family: 'Manrope';
+  font-weight: 400;
+  line-height: 1.5;/* by Laout 14px */
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  color: $light-theme-text;
+  opacity: 0.4;
+}
+
+.calendar__icon {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* by layout it should be 16px */
+}
+
+.calendar__svg {
+  fill: $accent-color-weather;
+  width: 17px;
+  height: 17px;
+}
+.calendar__arrow-btn {
+  display: flex;
+  align-items: center;
+
+  .arrow__down-svg {
+      fill: $calendar-arrow-color;
+      width: 15px;
+      height: 9px;
+    }
+  .arrow__up-svg {
+    fill: $white-color-text;
+    width: 15px;
+    height: 9px;
+
+    display: none;
+  }
+}
+// dark-theme for calendar-form
+body.isDark {
+  .calendar__form {
+    border-color: $dark-theme-text;
+  }
+  .calendar__title {
+    color: $calendar-maintext-color;
+  }
+}
+.calendar__form.selected {
+  background-color: $accent-color;
+  .calendar__form-text {
+    color: $primary-white-color;
+  }
+  .calendar__svg {
+    fill: $primary-white-color;
+  }
+  .arrow__up-svg {
+    display: block;
+  }
+  .arrow__down-svg {
+    display: none;
+  }
+}
+
+/* CALENDAR */
+.calendar__overlay {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  width: 250px;
+  height: 285px;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.calendar__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 250px;
+  padding: 23px 16px 20px;
+
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: $calendar-maintext-color;
+
+  background-color: $calendar-bkgd-color;
+  border-radius: 20px;
+
+  pointer-events: all;
+
+  transform: translateY(0);
+  transition: transform $transition-duration $timing-function;
+}
+
+.calendar__wrapper.closed {
+  pointer-events: none;
+  box-shadow: unset;
+
+  transform: translateY(-101%);
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.calendar__title {
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.calendar__arrows {
+  display: flex;
+  align-items: center;
+}
+.year__prev {
+  margin-right: 5px;
+}
+.year__next {
+  margin-right: 20px;
+}
+.month__prev {
+  margin-right: 33px;
+}
+.month__prev,
+.month__next {
+  width: 9px;
+  height: 17px;
+  fill: $accent-color;
+}
+
+.year__prev,
+.year__next {
+  width: 7px;
+  height: 12px;
+  fill: $accent-color;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+}
+
+.calendar .weeks li {
+  margin-bottom: 14px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: $calendar-week-color;
+}
+
+.days li.usual {
+  z-index: 1;
+  cursor: pointer;
+}
+
+.calendar .days li:nth-child(n + 8) {
+  margin-top: 12px;
+}
+
+.days li.usual{
+  &:nth-child(7n + 7) {
+    color:$theme-switcher-color;
+  }
+  &:nth-child(7n + 6) {
+    color: $theme-switcher-color;
+  }
+}
+
+.days li.selected__day.usual{
+  &:nth-child(7n + 7) {
+      color: $primary-white-color;
+    }
+    &:nth-child(7n + 6) {
+      color: $primary-white-color;
+    }
+}
+
+.days li.usual::before {
+  position: absolute;
+  content: '';
+  height: 28px;
+  width: 28px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.days li.usual:hover::before {
+  /* УТОЧНИТЬ НАДО ЛИ ХОВЕР И КАКОГО ЦВЕТА */
+  background-color: $calendar-hover-color;
+}
+
+.days li.inactive {
+  color: $calendar-week-color;
+}
+
+.days li.today {
+  color: $accent-color;
+  font-weight: 700;
+}
+
+.days li.selected__day{
+  color: $white-color-text;
+
+  &:hover::before {
+      background-color: $accent-color;
+    }
+  &::before {
+    background-color: $accent-color;
+  }
+}

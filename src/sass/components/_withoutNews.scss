@@ -1,0 +1,40 @@
+.not-found {
+  text-align: center;
+  padding: 40px 0;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 1.375;
+  }
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 1.375;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 1.375;
+  }
+}
+
+.not-found-image {
+  margin: 0 auto;
+  height: auto;
+  display: block;
+
+  @include mobile {
+    width: 248px;
+    padding-bottom: 50px;
+  }
+
+  @include tablet {
+    width: 560px;
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    width: 601px;
+    padding-bottom: 50px;
+  }
+}

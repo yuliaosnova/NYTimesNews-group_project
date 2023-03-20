@@ -1,0 +1,50 @@
+.btn-up {
+	position: fixed;
+	background-color: #605de7;
+	/* расстояние от правого края окна браузера */
+	right: 30px;
+	/* расстояние от нижнего края окна браузера */
+	bottom: 20px;
+	/* скругление верхнего левого угла */
+	// border-top-left-radius: 8px;
+	/* скругление верхнего правого угла */
+	// border-top-right-radius: 8px;
+	border-radius: 45px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+
+	z-index: 10;
+
+	@include desktop() {
+		right: 200px;
+		bottom: 200px;
+	 }
+
+	@include tablet() {
+		right: 50px;
+		bottom: 200px;
+	 }
+ }
+ 
+ .btn-up-icon {
+	content: "";
+	// width: 20px;
+	// height: 20px;
+	background: transparent no-repeat center center;
+	background-size: 100% 100%;
+	fill: $dark-theme-text;
+ }
+
+ .btn-up_hide {
+	display: none;
+ }
+ 
+ @media (hover: hover) and (pointer: fine) {
+	.btn-up:hover {
+	  background-color: #512da8; /* цвет заднего фона при наведении */
+	}
+ }

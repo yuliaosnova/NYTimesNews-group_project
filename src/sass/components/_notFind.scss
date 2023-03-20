@@ -1,0 +1,36 @@
+// ------- animation We haven’t found -------
+.not-find {
+  display: none;
+  z-index: -10;
+  &.find {
+    display: block;
+  }
+}
+
+.not-find__thumb {
+  width: 30%;
+  transform: translateY(30px);
+  animation: move 5s linear infinite;
+}
+.not-find__title {
+  @include font(20px, 1.35, 700);
+  @include tablet() {
+    font-size: 40px;
+  }
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  transform: translateY(-30px);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(230%) rotate(360deg);
+  }
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+}
