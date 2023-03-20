@@ -147,7 +147,6 @@ function addEvtLisOnArrowBtn() {
     const newsGallery = document.getElementById('read__gallery-' + button.id);
     const iconDown = button.firstElementChild;
     const iconTop = button.lastElementChild;
-    //  console.log(iconTop, iconDown);
 
     button.addEventListener('click', event => {
       newsGallery.classList.toggle('hidden');
